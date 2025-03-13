@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le VPH - Présentation Scientifique</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-virus me-2"></i>
+                Le VPH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#incubation">
+                            <i class="bi bi-clock-history me-1"></i>
+                            Incubation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depistage">
+                            <i class="bi bi-search me-1"></i>
+                            Dépistage
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#statistiques">
+                            <i class="bi bi-graph-up me-1"></i>
+                            Statistiques
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comportements">
+                            <i class="bi bi-shield-check me-1"></i>
+                            Prévention
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#consequences">
+                            <i class="bi bi-exclamation-triangle me-1"></i>
+                            Conséquences
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Ajout du bouton de défilement automatique -->
+            <button id="autoScrollBtn" class="btn btn-outline-light ms-3" data-bs-toggle="tooltip" title="Activer/Désactiver le défilement automatique">
+                <i class="bi bi-arrow-down-up"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 mb-5 bg-gradient position-relative overflow-hidden">
+        <div class="header-bg"></div>
+        <div class="container position-relative">
+            <div class="row min-vh-50 align-items-center py-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-4">Le VPH</h1>
+                    <p class="lead fs-4 mb-4">Une présentation scientifique sur le Virus du Papillome Humain</p>
+                    <a href="#incubation" class="btn btn-outline-light btn-lg">
+                        En savoir plus
+                        <i class="bi bi-arrow-down ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <img src="{{ url_for('static', filename='Le VPH.svg') }}" alt="Le VPH Illustration" class="img-fluid header-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <!-- Incubation Section -->
+        <section id="incubation" class="mb-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div data-aos="fade-up">
+                        <h2 class="display-6 mb-4">
+                            <i class="bi bi-clock-history text-primary me-2"></i>
+                            Incubation et traitement
+                        </h2>
+                        <div class="card bg-dark shadow-lg hover-card">
+                            <img src="{{ url_for('static', filename='images/Incubation et traitement.jpeg') }}" class="card-img-top" alt="Incubation et traitement">
+                            <div class="card-body p-4">
+                                <p class="lead mb-0">La période d'incubation moyenne du VPH est de 3 à 4 mois. Il existe plusieurs sortes de traitements notamment la vaccination, les traitements topiques (sur la peau ou les muqueuses), la cryothérapie et bien d'autre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dépistage Section -->
+        <section id="depistage" class="mb-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div data-aos="fade-up">
+                        <h2 class="display-6 mb-4">
+                            <i class="bi bi-search text-primary me-2"></i>
+                            Le test de dépistage
+                        </h2>
+                        <div class="card bg-dark shadow-lg mb-4">
+                            <img src="{{ url_for('static', filename='images/Le test de dépistage.jpeg') }}" class="card-img-top" alt="Test de dépistage">
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card bg-dark shadow-lg h-100 hover-card">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-gender-female text-info me-2"></i>
+                                            Test pour la femme
+                                        </h3>
+                                        <p class="mb-0">Le professionnel de la santé insère d'abord un spéculum dans le vagin pour garder les bord écartés. À l'aide d'une petite brosse, il frotte la surface du col de l'utérus pour récolter des céllulles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-dark shadow-lg h-100 hover-card">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-gender-male text-info me-2"></i>
+                                            Test pour l'homme
+                                        </h3>
+                                        <p class="mb-0">Le professionnel de la santé prend un échantillon de céllules dans la région anogénitale à l'aide de ses instruments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistiques Section -->
+        <section id="statistiques" class="mb-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div data-aos="fade-up">
+                        <h2 class="display-6 mb-4">
+                            <i class="bi bi-graph-up text-primary me-2"></i>
+                            Statistiques et facteurs de risques
+                        </h2>
+                        <div class="card bg-dark shadow-lg mb-4">
+                            <img src="{{ url_for('static', filename='images/Statistiques et facteurs de risques .jpeg') }}" class="card-img-top" alt="Statistiques et facteurs de risques">
+                        </div>
+                        <div class="card bg-dark shadow-lg hover-card">
+                            <div class="card-body p-4">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-exclamation-triangle text-warning me-2"></i>
+                                            Facteurs de risques
+                                        </h3>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <i class="bi bi-dot text-warning me-2"></i>
+                                                Absence de protections lors des relations
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-dot text-warning me-2"></i>
+                                                Antécédents de VPH
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-shield-check text-success me-2"></i>
+                                            Prévention
+                                        </h3>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Port du préservatif
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Vaccination
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr class="my-4">
+                                <p class="mb-0">Les statistiques démontrent que les cas de VPH augmentent ces dernières années.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comportements Section -->
+        <section id="comportements" class="mb-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div data-aos="fade-up">
+                        <h2 class="display-6 mb-4">
+                            <i class="bi bi-shield-check text-primary me-2"></i>
+                            Comportements à adopter
+                        </h2>
+                        <div class="card bg-dark shadow-lg mb-4">
+                            <img src="{{ url_for('static', filename='images/Comportement à adopter.jpeg') }}" class="card-img-top" alt="Comportements à adopter">
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card bg-dark shadow-lg h-100 hover-card">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-shield-plus text-success me-2"></i>
+                                            Prévention
+                                        </h3>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Vaccination</li>
+                                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Utilisation de préservatif</li>
+                                            <li><i class="bi bi-check2 text-success me-2"></i>Examens fréquents chez un médecin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-dark shadow-lg h-100 hover-card">
+                                    <div class="card-body p-4">
+                                        <h3 class="h5 mb-3">
+                                            <i class="bi bi-heart-pulse text-danger me-2"></i>
+                                            En cas de contraction
+                                        </h3>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Consultations régulières</li>
+                                            <li><i class="bi bi-check2 text-success me-2"></i>Bonne hygiène de vie</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conséquences Section -->
+        <section id="consequences" class="mb-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div data-aos="fade-up">
+                        <h2 class="display-6 mb-4">
+                            <i class="bi bi-exclamation-triangle text-primary me-2"></i>
+                            Les conséquences
+                        </h2>
+                        <div class="card bg-dark shadow-lg mb-4">
+                            <img src="{{ url_for('static', filename='images/Les conséquences.jpeg') }}" class="card-img-top" alt="Les conséquences">
+                        </div>
+                        <div class="card bg-dark shadow-lg hover-card border-warning">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">
+                                    <i class="bi bi-exclamation-circle text-warning me-2"></i>
+                                    Conséquences fréquentes
+                                </h3>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><i class="bi bi-dot text-warning me-2"></i>Lésions orales et respiratoires</li>
+                                    <li class="mb-2"><i class="bi bi-dot text-warning me-2"></i>Cancer de l'utérus, du pénis et de l'anus</li>
+                                    <li><i class="bi bi-dot text-warning me-2"></i>Blocages des canaux vaginaux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4 mt-5">
+        <div class="container">
+            <p class="text-center mb-0">&copy; 2024 Présentation Scientifique sur le VPH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
